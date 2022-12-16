@@ -16,9 +16,14 @@ const Jobs = () => {
   };
 
   return (
-    <Layout>
+    <Layout
+      title={"Вакансии | Служба занятости Херсонской области"}
+      description={
+        "вакансии службы занятости центра занятости херсонской области, херсона, найти работу"
+      }
+    >
       <Hero />
-      <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-16 py-8 flex-1">
+      <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8 flex-1">
         <span className=" block text-4xl my-12">
           Вакансии в Херсонской олбасти (обновлено 13.12.2022)
         </span>

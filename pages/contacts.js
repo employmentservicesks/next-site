@@ -3,7 +3,12 @@ import Hero from "../components/Hero";
 
 const Contacts = () => {
   return (
-    <Layout>
+    <Layout
+      title={"Контакты | Служба занятости Херсонской области"}
+      description={
+        "контакты службы занятости центра занятости херсонской области, херсона"
+      }
+    >
       <Hero />
       <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8">
         <div className="w-full">

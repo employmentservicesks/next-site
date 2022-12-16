@@ -2,10 +2,10 @@ import Footer from "./Footer";
 import NavBar from "./NavBar";
 import HeadComponent from "./HeadComponent";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title, description, icon }) => {
   return (
     <>
-      <HeadComponent />
+      <HeadComponent title={title} description={description} icon={icon} />
       <div className="min-h-screen flex flex-col">
         <NavBar />
         {children}
