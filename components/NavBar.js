@@ -33,7 +33,7 @@ function NavBar() {
             "/contacts"
           )}`}
         >
-          {/* <Link href="/contacts">Контакты</Link> */}
+          <Link href="/contacts">Контакты</Link>
         </div>
       </div>
     </nav>
