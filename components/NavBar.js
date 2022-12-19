@@ -32,7 +32,7 @@ function NavBar() {
         </div>
         <span
           onClick={handleShowMenu}
-          className={`${styles.mobile_menu} material-symbols-outlined mr-2 cursor-pointer`}
+          className={`material-symbols-outlined mr-2 cursor-pointer ${styles.mobile_menu} `}
         >
           menu
         </span>
