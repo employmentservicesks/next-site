@@ -6,6 +6,10 @@
   display: none;
 }
 
+.mobile_menu_item {
+  margin-right: 30px;
+}
+
 @media screen and (max-width: 490px) {
   .desktop_menu {
     display: none;
@@ -16,5 +20,6 @@
 
   .mobile_menu_item {
     margin-top: 30px;
+    margin-right: 0;
   }
 }
