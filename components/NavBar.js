@@ -30,12 +30,15 @@ function NavBar() {
             active={router.pathname === "/contacts"}
           />
         </div>
-        <span
-          onClick={handleShowMenu}
-          className={`material-symbols-outlined mr-2 cursor-pointer ${styles.mobile_menu} `}
-        >
-          menu
-        </span>
+        <div className={styles.mobile_menu}>
+          <span
+            onClick={handleShowMenu}
+            className={`material-symbols-outlined mr-2 cursor-pointer  `}
+          >
+            menu
+          </span>
+        </div>
+
         {showMobileMenu && (
           <div className="w-screen h-screen fixed bg-black/60 top-0 left-0 flex items-center justify-center">
             <span
