@@ -3,7 +3,7 @@
 }
 
 .mobile_menu {
-  display: none;
+  display: none !important;
 }
 
 @media screen and (max-width: 490px) {
