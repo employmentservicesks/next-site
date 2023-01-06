@@ -21,7 +21,7 @@ cron.schedule("59 8 * * *", () => {
   bot
     .setChatPermissions(chatName, { can_send_messages: true })
     .then(() =>
-      bot.sendMessage(chatName, "Отправка сообщений в чат разрешена до 09:00")
+      bot.sendMessage(chatName, "Отправка сообщений в чат разрешена до 18:00")
     )
     .catch((e) => console.log(e));
 });
