@@ -18,6 +18,8 @@ function AccordionItem({ region }) {
               : "/assets/images/arrowDown.gif"
           }
           className="h-8"
+          width={33}
+          height={32}
         />
       </div>
       {showAccordion && (

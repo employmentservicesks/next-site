@@ -30,7 +30,6 @@ const Contacts = () => {
               </span>
             </a>
           </div>
-
           <span className="block text-xl my-4 text-bold">
             Так же вы можете связаться с нами по электронной почте:
           </span>
