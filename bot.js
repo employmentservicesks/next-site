@@ -6,7 +6,7 @@ const bot = new TelegramBot(token, { polling: true });
 
 const chatName = "-1001623450891";
 
-bot.sendMessage(chatName, "проверка работы бота");
+bot.sendMessage(chatName, "MainControlBot управляет графиком работы чата");
 
 cron.schedule("1 18 * * *", () => {
   bot
@@ -19,7 +19,7 @@ cron.schedule("1 18 * * *", () => {
 
 cron.schedule("59 8 * * *", () => {
   bot
-    .setChatPermissions(chatName, { can_send_messages: false })
+    .setChatPermissions(chatName, { can_send_messages: true })
     .then(() =>
       bot.sendMessage(chatName, "Отправка сообщений в чат разрешена до 09:00")
     )
