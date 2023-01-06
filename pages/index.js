@@ -11,7 +11,7 @@ export default function Home() {
       }
     >
       <Hero />
-      <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8">
+      <div className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8">
         <span className="block text-xl mb-4 text-bold">
           Для подачи документов в Службу занятости в электронном виде скачайте
           бланки резюме и шаблонов, которые размещены ниже. После этого отправте
@@ -53,7 +53,7 @@ export default function Home() {
             странице
           </Link>
         </span>
-      </section>
+      </div>
     </Layout>
   );
 }
