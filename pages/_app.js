@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
   };
 
   useEffect(() => {
-    const theme = localStorage.getItem("theme");
+    const theme = localStorage.getItem("theme") || "dark";
     setSiteTheme(theme);
     html.current = document.getElementById("html");
     html.current.className = theme;

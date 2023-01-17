@@ -24,7 +24,7 @@ export default function Home() {
         <div className="flex w-full justify-center my-12">
           <video
             className="w-full md:w-2/3 xl:w-1/2 drop-shadow-2xl"
-            src="/assets/videos/main_video.mp4"
+            src="/assets/videos/main_video.MP4"
             controls
             width={"100%"}
           />
