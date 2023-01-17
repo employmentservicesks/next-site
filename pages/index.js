@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Link from "next/link";
+import LineHR from "../components/LineHR";
 
 export default function Home() {
   return (
@@ -11,7 +12,104 @@ export default function Home() {
       }
     >
       <Hero />
-      <div className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8">
+      <div className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 text-black dark:text-gray-100 px-8 sm:px-16 py-8">
+        <span className="text-2xl md:text-6xl font-bold mb-12 block">
+          Главная
+        </span>
+        <LineHR />
+        <span className="text-2xl block">
+          Узнайте подробнее о процессе поиска работы при оффлайн обращении в
+          Службу занятости, посомтрев видео ниже.
+        </span>
+        <div className="flex w-full justify-center my-12">
+          <video
+            className="w-full md:w-2/3 xl:w-1/2 drop-shadow-2xl"
+            src="/assets/videos/main_video.mp4"
+            controls
+            width={"100%"}
+          />
+        </div>
+        <LineHR />
+        <span className="text-2xl block">Этапы дистанционного обращения</span>
+        <div className="flex flex-wrap mt-8">
+          <div className="flex flex-col items-center w-full md:w-1/2 xl:w-1/4 p-4 text-center">
+            <img
+              alt=""
+              width={"100%"}
+              src={"/assets/images/checking_jobs.PNG"}
+              className="mb-4"
+            />
+            <span className="text-lg">Заполните и вышлите онлайн резюме</span>
+          </div>
+          <div className="flex flex-col items-center w-full md:w-1/2 xl:w-1/4 p-4 text-center">
+            <img
+              alt=""
+              width={"100%"}
+              src={"/assets/images/serach_jobs.PNG"}
+              className="mb-4"
+            />
+            <span className="text-lg">
+              Наши специалисты подберут для вас вакансии
+            </span>
+          </div>
+          <div className="flex flex-col items-center w-full md:w-1/2 xl:w-1/4 p-4 text-center">
+            <img
+              alt=""
+              width={"100%"}
+              src={"/assets/images/online-interview.PNG"}
+              className="mb-4"
+            />
+            <span className="text-lg">
+              Пройдите онлайн собесодование с работодателем
+            </span>
+          </div>
+          <div className="flex flex-col items-center w-full md:w-1/2 xl:w-1/4 p-4 text-center">
+            <img
+              alt=""
+              width={"100%"}
+              src={"/assets/images/employing.PNG"}
+              className="mb-4"
+            />
+            <span className="text-lg">
+              Получите предложение о трудоустройстве
+            </span>
+          </div>
+        </div>
+        <LineHR />
+        <span className="text-2xl block">Советы по написанию резюме</span>
+        <ul className="list-disc pl-8 pt-8">
+          <li className="my-2">
+            Начните с описания себя, состоящее из 1-3 предложений, отражена
+            ключевая информация, навыки и компетенции, характеризующие вас как
+            профессионала и/или эксперта. Прикрипите свое фото
+          </li>
+          <li className="my-2">
+            Укажите уровень Вашего образования и законченые учебные заведения,
+            курсы
+          </li>
+          <li className="my-2">
+            Рапсишите Ваши предыдущие места работы с указанием периодов работы и
+            занимаемых должностей
+          </li>
+          <li className="my-2">
+            Расписшите ваши задачи и обязанности, распределите их в порядке
+            убывания от супер важных к менее важным.
+          </li>
+          <li className="my-2">
+            Обязательно указывайте ваши успехи (достижения) для каждого места
+            работы. Они должны быть конкретны, измеримы и соответствовать
+            должности.
+          </li>
+          <li className="my-2">Расскажите о Ваших ключевых навыках</li>
+          <li className="my-2">
+            Укажите желаемую должность и заработную плату
+          </li>
+          <li className="my-2">
+            Не забудьте указать всю контактную информацию чтобы с Вами можно
+            было связаться
+          </li>
+        </ul>
+        <LineHR />
         <span className="block text-xl mb-4 text-bold">
           Для подачи документов в Службу занятости в электронном виде скачайте
           бланки резюме и шаблонов, которые размещены ниже. После этого отправте
@@ -34,7 +132,7 @@ export default function Home() {
             href="/docs/резюме.docx"
             download=""
           >
-            <span class="material-symbols-outlined mr-4">description</span>
+            <span className="material-symbols-outlined mr-4">description</span>
             резюме
           </a>
           <a
@@ -42,7 +140,7 @@ export default function Home() {
             href="/docs/анкета.docx"
             download=""
           >
-            <span class="material-symbols-outlined mr-4">description</span>
+            <span className="material-symbols-outlined mr-4">description</span>
             анкета
           </a>
         </div>

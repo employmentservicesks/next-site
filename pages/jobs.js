@@ -5,8 +5,10 @@ import { jobs } from "../helpers/jobs";
 import AccordionItem from "../components/AccordionItem";
 
 const Jobs = () => {
-  const createHeader = (jobsList) => {
-    const headers = Object.keys(jobsList);
+  const createHeader = (jobsList, first) => {
+    let headers;
+    if (first) headers = Object.keys(jobsList).sort().slice(0, 6);
+    else headers = Object.keys(jobsList).sort().slice(6, 11);
     const DOMHeaders = [];
 
     for (const header of headers) {
@@ -23,7 +25,7 @@ const Jobs = () => {
       }
     >
       <Hero />
-      <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8 flex-1">
+      <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8 flex-1 text-black dark:text-white">
         <span className=" block text-4xl my-12">
           Вакансии в Херсонской олбасти (обновлено 13.12.2022)
         </span>
@@ -50,7 +52,14 @@ const Jobs = () => {
             </span>
           </a>
         </span>
-        {createHeader(jobs)}
+        <div className="flex flex-wrap gap-2 justify-center">
+          <div className="w-full md:max-w-md lg:max-w-lg 2xl:max-w-3xl">
+            {createHeader(jobs, true)}
+          </div>
+          <div className="w-full md:max-w-md lg:max-w-lg 2xl:max-w-3xl">
+            {createHeader(jobs)}
+          </div>
+        </div>
       </section>
     </Layout>
   );

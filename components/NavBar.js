@@ -1,18 +1,48 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "./NavBar.module.css";
 import NavBarItem from "./NavBarItem";
+import { ThemeContext } from "../pages/_app";
 
 function NavBar() {
   const router = useRouter();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [navPosition, setNavPosition] = useState(0);
+  const { theme, clickHandler } = useContext(ThemeContext);
+
+  useEffect(() => {
+    let prevPos = 0;
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > prevPos) {
+        setNavPosition("-96px");
+      } else setNavPosition(0);
+      prevPos = this.scrollY;
+    });
+  }, []);
 
   const handleShowMenu = () => setShowMobileMenu(!showMobileMenu);
 
   return (
-    <nav className="w-full h-24 sm:px-8 bg-gray-300 dark:bg-gray-700">
-      <div className="container mx-auto w-full h-full flex  items-center text-gray-600 dark:text-gray-100 text-2xl justify-between px-2">
+    <nav
+      className="w-full h-24 sm:px-8 bg-gray-300 dark:bg-gray-700 fixed left-0 duration-300 z-50"
+      style={{ top: navPosition }}
+    >
+      <div className="container mx-auto w-full h-full flex  items-center text-black dark:text-gray-100 text-2xl justify-between px-2">
         <img className="h-12 mr-8 sm:mr-24" src={"/assets/images/logo.png"} />
+        <div
+          id="themeBtn"
+          onClick={() => clickHandler(theme)}
+          className="flex justify-center items-center rounded-full w-10 h-10 border-2 border-black dark:border-white cursor-pointer mr-12"
+        >
+          {theme !== "light" ? (
+            <span className="material-symbols-outlined select-none">sunny</span>
+          ) : (
+            <span className="material-symbols-outlined select-none">
+              nightlight
+            </span>
+          )}
+        </div>
         <div className={`${styles.desktop_menu}`}>
           <NavBarItem
             text={"Главная"}

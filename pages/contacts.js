@@ -12,8 +12,8 @@ const Contacts = () => {
       <Hero />
       <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8">
         <div className="w-full">
-          <span className="uppercase text-white text-4xl mb-12 block">
-            контакты
+          <span className="text-2xl md:text-6xl font-bold mb-12 block">
+            Контакты
           </span>
           <span className="block text-xl mb-4 text-bold">
             По всем вопросам касательно тродоустройства обращайтесь по единому
