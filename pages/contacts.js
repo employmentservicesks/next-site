@@ -68,6 +68,18 @@ const Contacts = () => {
             Службы занятости Херсонской области, где вы можете задать
             интересующий Вас вопрос
           </span>
+          <span className="block text-xl my-4 text-bold">
+            Присоединяйтесь к нашей официальной группе{" "}
+            <a
+              className="block text-lg mb-4 text-bold flex items-center"
+              href="https://vk.com/slyzhba_zanyatosti_ks"
+            >
+              <span className="material-symbols-outlined">groups</span>
+              <span className="underline underline-offset-4 ml-4">
+                Вконтакте
+              </span>
+            </a>
+          </span>
         </div>
       </section>
     </Layout>
