@@ -128,7 +128,7 @@ export default function Home() {
         </span>
         <div className="flex flex-wrap justify-around w-full">
           <a
-            className="h-12 mb-4 uppercase text-blue-200 font-bold flex items-center border-blue-200 rounded-md hover:bg-blue-200 hover:text-gray-600 justify-center  border border-2 w-48"
+            className="h-12 mb-4 uppercase dark:text-blue-200 font-bold flex items-center border-black dark:border-blue-200 rounded-md hover:bg-blue-200 hover:text-gray-600 dark:hover:text-black justify-center  border border-2 w-48"
             href="/docs/резюме.docx"
             download=""
           >
@@ -136,7 +136,7 @@ export default function Home() {
             резюме
           </a>
           <a
-            className="sm:ml-2 h-12 uppercase text-blue-200 font-bold flex items-center border-blue-200 rounded-md hover:bg-blue-200 hover:text-gray-600 justify-center  border border-2 w-48"
+            className="sm:ml-2 h-12 uppercase dark:text-blue-200 font-bold flex items-center border-black dark:border-blue-200 rounded-md hover:bg-blue-200 hover:text-gray-600 dark:hover:text-black justify-center  border border-2 w-48"
             href="/docs/анкета.docx"
             download=""
           >
