@@ -18,8 +18,8 @@ export default function Home() {
         </span>
         <LineHR />
         <span className="text-2xl block">
-          Узнайте подробнее о процессе поиска работы при оффлайн обращении в
-          Службу занятости, посмотрев видео ниже.
+          Узнайте подробнее о процессе подбора подходящей работы при оффлайн
+          обращении в Службу занятости, посмотрев видео ниже.
         </span>
         <div className="flex w-full justify-center my-12">
           <video
@@ -112,8 +112,9 @@ export default function Home() {
         <LineHR />
         <span className="block text-xl mb-4 text-bold">
           Для подачи документов в Службу занятости в электронном виде скачайте
-          бланки резюме и шаблонов, которые размещены ниже. После этого отправте
-          их нам на электронную почту:{" "}
+          бланки резюме и заявления, которые размещены ниже. После этого
+          отправьте заполненные документы на электронную почту Службы занятости
+          Херсонской области:{" "}
           <a
             className="block text-lg mb-8 text-bold flex items-center"
             href="mailto:sluzhba_z@khogov.ru"
@@ -141,7 +142,7 @@ export default function Home() {
             download=""
           >
             <span className="material-symbols-outlined mr-4">description</span>
-            анкета
+            заявление
           </a>
         </div>
         <span className="block text-xl mt-6 text-bold">
