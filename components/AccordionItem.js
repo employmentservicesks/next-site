@@ -7,7 +7,7 @@ function AccordionItem({ region }) {
   return (
     <div className="w-full duration-500 pb-4 text-black dark:text-white">
       <div
-        className="text-2xl flex justify-between cursor-pointer select-none border border-black dark:border-white py-4 px-8"
+        className="text-2xl flex justify-between cursor-pointer select-none border border-black dark:border-white py-4 px-8 items-center"
         onClick={() => setShowAccordion(!showAccordion)}
       >
         <span>{region} район</span>
