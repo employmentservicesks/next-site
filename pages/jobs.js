@@ -6,9 +6,11 @@ import AccordionItem from "../components/AccordionItem";
 
 const Jobs = () => {
   const createHeader = (jobsList, first) => {
+    const sorted = Object.keys(jobsList).sort();
     let headers;
-    if (first) headers = Object.keys(jobsList).sort().slice(0, 6);
-    else headers = Object.keys(jobsList).sort().slice(6, 11);
+
+    if (first) headers = sorted.slice(0, 7);
+    else headers = sorted.slice(7, 13);
     const DOMHeaders = [];
 
     for (const header of headers) {
