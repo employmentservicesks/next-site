@@ -10,7 +10,7 @@ const Contacts = () => {
       }
     >
       <Hero />
-      <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 text-black dark:text-gray-100 px-8 sm:px-16 py-8">
+      <section className="container w-full shadow-2xl bg-white dark:bg-gray-100 text-black px-8 sm:px-16 py-8">
         <div className="w-full">
           <span className="text-2xl md:text-6xl font-bold mb-12 block">
             Контакты
