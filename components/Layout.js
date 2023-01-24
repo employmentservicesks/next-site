@@ -8,7 +8,6 @@ const Layout = ({ children, title, description, icon }) => {
       <HeadComponent title={title} description={description} icon={icon} />
       <div className="min-h-screen flex flex-col pt-24">
         <NavBar />
-        <div></div>
         {children}
         <Footer />
       </div>
