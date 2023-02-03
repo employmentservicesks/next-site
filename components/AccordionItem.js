@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { jobs } from "../helpers/jobs";
 
 function AccordionItem({ region }) {
   const [showAccordion, setShowAccordion] = useState(false);
+  const [whiteList, setWhiteList] = useState([]);
+
+  useEffect(() => {
+    const items = jobs[region].map((item) => item.trim());
+    const setItems = Array.from(new Set(items));
+    setWhiteList(setItems);
+  }, [region]);
 
   return (
     <div className="w-full duration-500 pb-4 text-black dark:text-white">
@@ -29,7 +36,7 @@ function AccordionItem({ region }) {
         }}
         className="mt-8 pl-2 sm:pl-8 duration-500 overflow-auto"
       >
-        {jobs[region].map((job, index) => (
+        {whiteList.map((job, index) => (
           <div key={index} className="flex items-center">
             <img
               alt={job}
