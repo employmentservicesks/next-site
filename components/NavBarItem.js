@@ -6,7 +6,7 @@ export default function NavBarItem({ text, path, active = false }) {
     <div
       className={`${
         styles.mobile_menu_item
-      } underline-offset-8 hover:underline decoration-gray-600 dark:decoration-gray-100 decoration-4 ${
+      } underline-offset-8 hover:underline decoration-gray-600 dark:decoration-gray-100 decoration-4 text-sm md:text-xl ${
         active ? "underline" : ""
       }`}
     >

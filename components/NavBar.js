@@ -55,6 +55,11 @@ function NavBar() {
             active={router.pathname === "/jobs"}
           />
           <NavBarItem
+            text={"Работодателям"}
+            path="/employer"
+            active={router.pathname === "/employer"}
+          />
+          <NavBarItem
             text={"Контакты"}
             path="/contacts"
             active={router.pathname === "/contacts"}
@@ -87,6 +92,11 @@ function NavBar() {
                 text={"Вакансии"}
                 path="/jobs"
                 active={router.pathname === "/jobs"}
+              />
+              <NavBarItem
+                text={"Работодателям"}
+                path="/employer"
+                active={router.pathname === "/employer"}
               />
               <NavBarItem
                 text={"Контакты"}
