@@ -4,8 +4,17 @@ import Link from "next/link";
 import LineHR from "../components/LineHR";
 import TitlePageMain from "../components/TypographyElements/TitlePageMain";
 import TitlePageSecondary from "../components/TypographyElements/TitlePageSecondary";
+import Slider from "react-slick";
 
 export default function Home() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <Layout
       title={"Главная | Служба занятости Херсонской области"}
@@ -17,6 +26,69 @@ export default function Home() {
       <div className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 text-black dark:text-gray-100 px-8 sm:px-16 py-8 flex justify-center">
         <div className="container">
           <TitlePageMain text={"главная"} />
+          <LineHR />
+          <div className="flex w-full justify-center my-12">
+            <video
+              className="w-3/4 drop-shadow-2xl"
+              src="/assets/videos/army.mp4"
+              controls
+              width={"100%"}
+            />
+          </div>
+          <div className="flex w-full justify-center">
+            <Slider {...settings} className="w-3/4">
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/img1.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/img2.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/страница_1.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/страница_2.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/страница_3.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/страница_4.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/страница_5.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/страница_6.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/страница_7.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="служба в армии по контракту"
+                src="/assets/images/army/страница_8.jpg"
+                loading="lazy"
+              />
+            </Slider>
+          </div>
           <LineHR />
           <TitlePageSecondary text="Информация для руководителей и бухгалтеров хозяйствующих субъектов!" />
           <span className="text-xl md:text-2xl mb-12 block text-justify">
