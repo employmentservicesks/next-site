@@ -29,7 +29,7 @@ const Jobs = () => {
       <Hero />
       <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8 flex-1 text-black dark:text-white">
         <span className=" block text-4xl my-12">
-          Вакансии в Херсонской области (обновлено 27.03.2023)
+          Вакансии в Херсонской области (обновлено 18.04.2023)
         </span>
         <span className=" block text-2xl my-6">
           На данной странице вы можете ознакомиться с актуальными вакансиями по
