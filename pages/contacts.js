@@ -63,7 +63,7 @@ const Contacts = () => {
               href="https://t.me/CZ_infoBot"
             >
               <span className="underline underline-offset-4">
-                чат-боте Телеграм.
+                чат-бот Телеграм.
               </span>
             </a>{" "}
             Службы занятости Херсонской области, где вы можете задать
