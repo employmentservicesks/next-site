@@ -10,8 +10,8 @@ const Contacts = () => {
       }
     >
       <Hero />
-      <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 text-black dark:text-gray-100 px-8 sm:px-16 py-8">
-        <div></div>
+      <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 text-black dark:text-gray-100 px-8 sm:px-16 py-8 flex justify-center">
+        <div className="container">
         <div className="w-full">
           <span className="text-2xl md:text-6xl font-bold mb-12 block">
             Контакты
@@ -81,6 +81,7 @@ const Contacts = () => {
               </span>
             </a>
           </span>
+        </div>
         </div>
       </section>
     </Layout>

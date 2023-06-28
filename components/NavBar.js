@@ -9,11 +9,14 @@ function NavBar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [navPosition, setNavPosition] = useState(0);
   const { theme, clickHandler } = useContext(ThemeContext);
+  const [blur, setBlur] = useState(false)
 
   useEffect(() => {
     let prevPos = 0;
 
     window.addEventListener("scroll", function () {
+      if(window.scrollY == 0) setBlur(false)
+      else setBlur(true)
       if (window.scrollY > prevPos) {
         setNavPosition("-96px");
       } else setNavPosition(0);
@@ -25,7 +28,7 @@ function NavBar() {
 
   return (
     <nav
-      className="w-full h-24 sm:px-8 bg-gray-300 dark:bg-gray-700 fixed left-0 duration-300 z-50"
+      className={`w-full h-24 sm:px-8 ${blur && 'backdrop-blur-xl'} fixed left-0 duration-300 z-50`}
       style={{ top: navPosition }}
     >
       <div className="container mx-auto w-full h-full flex  items-center text-black dark:text-gray-100 text-2xl justify-between px-2">

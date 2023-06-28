@@ -6,7 +6,7 @@ const Layout = ({ children, title, description, icon }) => {
   return (
     <>
       <HeadComponent title={title} description={description} icon={icon} />
-      <div className="min-h-screen flex flex-col pt-24">
+      <div className="min-h-screen flex flex-col">
         <NavBar />
         {children}
         <Footer />

@@ -1,8 +1,8 @@
 function Hero() {
   return (
     <section
-      className="w-full h-96 flex items-center justify-center flex-auto"
-      style={{ backgroundImage: "url('/assets/images/bg.jpg')" }}
+      className="w-full flex items-center justify-center flex-auto"
+      style={{ backgroundImage: "url('/assets/images/bg.jpg')", height: '400px' }}
     >
       <div className="flex flex-col sm:flex-row items-center">
         <img
