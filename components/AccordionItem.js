@@ -14,10 +14,11 @@ function AccordionItem({ region }) {
   return (
     <div className="w-full duration-500 pb-4 text-black dark:text-white">
       <div
-        className="text-2xl flex justify-between cursor-pointer select-none border border-black dark:border-white py-4 px-8 items-center"
+        // className="text-2xl flex justify-between cursor-pointer select-none border border-black dark:border-white py-4 px-8 items-center"
+        className="text-2xl flex justify-between cursor-pointer select-none bg-gray-50 dark:bg-indigo-300 rounded-md py-4 px-8 items-center"
         onClick={() => setShowAccordion(!showAccordion)}
       >
-        <span>{region} район</span>
+        <span className="dark:text-blue-800">{region} район</span>
         {showAccordion ? (
           <span className="material-symbols-outlined text-2xl">
             expand_less
