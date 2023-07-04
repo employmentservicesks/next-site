@@ -58,7 +58,7 @@ function NavBar() {
             active={router.pathname === "/jobs"}
           />
           <NavBarItem
-            text={"Работодателям"}
+            text={"Информация"}
             path="/employer"
             active={router.pathname === "/employer"}
           />
