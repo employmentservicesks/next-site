@@ -36,7 +36,7 @@ const Employer = () => {
       </Head>
       <Hero />
       <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8 flex-1 text-black dark:text-white">
-        <span className=" block text-4xl my-12">Важная информация</span>
+        <div container='container'><TitlePageSecondary text='Важная информация'/></div>
         <div className="flex items-center my-12 flex-col">
           <Slider {...settings} className="w-full lg:w-3/4">
             <img
