@@ -10,10 +10,11 @@
   margin-right: 30px;
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 1030px) {
   .desktop_menu {
     display: none;
   }
+
   .mobile_menu {
     display: flex;
   }
