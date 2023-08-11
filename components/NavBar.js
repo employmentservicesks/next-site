@@ -15,7 +15,7 @@ function NavBar() {
     let prevPos = 0;
 
     window.addEventListener("scroll", function () {
-      if(window.scrollY == 0) setBlur(false)
+      if (window.scrollY == 0) setBlur(false)
       else setBlur(true)
       if (window.scrollY > prevPos) {
         setNavPosition("-96px");
@@ -63,6 +63,11 @@ function NavBar() {
             active={router.pathname === "/employer"}
           />
           <NavBarItem
+            text={"Профориентация"}
+            path="/proforientation"
+            active={router.pathname === "/proforientation"}
+          />
+          <NavBarItem
             text={"Контакты"}
             path="/contacts"
             active={router.pathname === "/contacts"}
@@ -97,9 +102,14 @@ function NavBar() {
                 active={router.pathname === "/jobs"}
               />
               <NavBarItem
-                text={"Работодателям"}
+                text={"Информация"}
                 path="/employer"
                 active={router.pathname === "/employer"}
+              />
+              <NavBarItem
+                text={"Профориентация"}
+                path="/employer"
+                active={router.pathname === "/proforientation"}
               />
               <NavBarItem
                 text={"Контакты"}
