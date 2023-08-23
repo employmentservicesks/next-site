@@ -11,7 +11,7 @@ export default function Organisations() {
                 </div>
                 <div className="flex mt-4 md:mt-0  p-8 rounded-xl bg-gray-300  sm:max-w-xl h-max items-center">
                     <img width={80} src='assets/images/prof/q2.svg' />
-                    <span className="ml-4 font-bold">Министерства труда и социальной защиты Российской Федерации</span>
+                    <span className="ml-4 font-bold">Роструд</span>
                 </div>
                 <div className="flex mt-4 md:mt-0 p-8 rounded-xl bg-gray-300 sm:max-w-xl h-max items-center">
                     <img width={80} src='assets/images/prof/222.svg' />
