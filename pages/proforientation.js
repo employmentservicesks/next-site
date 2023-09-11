@@ -5,6 +5,7 @@ import Organisations from "../components/ProfOrientation/Organisations"
 import Reasons from "../components/ProfOrientation/Reasons"
 import HowToStudy from "../components/ProfOrientation/HowToStydy"
 import Docs from "../components/ProfOrientation/Docs"
+import Presatation from "../components/ProfOrientation/Presantation"
 
 export default function ProfOrientation() {
 
@@ -31,6 +32,7 @@ export default function ProfOrientation() {
                 <Reasons />
                 <HowToStudy />
                 <Docs />
+                <Presatation />
             </section>
         </Layout>
     )
