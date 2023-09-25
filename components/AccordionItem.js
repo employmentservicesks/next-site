@@ -1,14 +1,25 @@
 import { useEffect, useState } from "react";
 import { jobs } from "../helpers/jobs";
+import { otherJobs } from "../helpers/otherJobs";
 
-function AccordionItem({ region }) {
+const setList = (collection, region) => {
+  const items = collection[region].map((item) => item.trim());
+  const setItems = Array.from(new Set(items));
+  return setItems;
+}
+
+function AccordionItem({ region, collection }) {
   const [showAccordion, setShowAccordion] = useState(false);
   const [whiteList, setWhiteList] = useState([]);
 
   useEffect(() => {
-    const items = jobs[region].map((item) => item.trim());
-    const setItems = Array.from(new Set(items));
-    setWhiteList(setItems);
+    let list = undefined
+    if (collection) {
+      list = setList(jobs, region)
+    } else {
+      list = setList(otherJobs, region)
+    }
+    setWhiteList(list)
   }, [region]);
 
   return (
@@ -18,7 +29,7 @@ function AccordionItem({ region }) {
         className="text-2xl flex justify-between cursor-pointer select-none bg-gray-50 dark:bg-indigo-300 rounded-md py-4 px-8 items-center"
         onClick={() => setShowAccordion(!showAccordion)}
       >
-        <span className="dark:text-blue-800">{region} район</span>
+        <div><span className="dark:text-blue-800">{region}</span>{collection && <span className="dark:text-blue-800"> район</span>}</div>
         {showAccordion ? (
           <span className="material-symbols-outlined text-2xl">
             expand_less
