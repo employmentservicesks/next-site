@@ -67,7 +67,7 @@ const Jobs = () => {
           </a>
         </span>
         <LineHR />
-        <div className="flex flex-wrap gap-x-12 justify-center">
+        <div className="flex flex-wrap gap-x-12 justify-between">
           <div className="w-full md:max-w-md lg:max-w-lg 2xl:max-w-3xl">
             {createHeader(jobs, true, true)}
           </div>
@@ -75,8 +75,8 @@ const Jobs = () => {
             {createHeader(jobs, null, true)}
           </div>
         </div>
-        <TitlePageSecondary text='Другие регионы' />
-        <div className="flex flex-wrap gap-x-12 justify-center">
+        <TitlePageSecondary text='Другие регионы Российской Федерации' />
+        <div className="flex flex-wrap gap-x-12 justify-between">
           <div className="w-full md:max-w-md lg:max-w-lg 2xl:max-w-3xl">
             {createHeader(otherJobs, true)}
           </div>
