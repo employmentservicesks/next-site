@@ -4,16 +4,10 @@ import Link from "next/link";
 import LineHR from "../components/LineHR";
 import TitlePageMain from "../components/TypographyElements/TitlePageMain";
 import TitlePageSecondary from "../components/TypographyElements/TitlePageSecondary";
-import Slider from "react-slick";
+import SliderMainPage from "../components/MainPage/SliderMainPage";
+import RemoteStagesItem from "../components/MainPage/RemoteStagesItem";
 
 export default function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   return (
     <Layout
@@ -36,60 +30,8 @@ export default function Home() {
             />
           </div>
           <div className="flex w-full justify-center">
-            <Slider {...settings} className="w-3/4">
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/img1.jpg"
-                loading="lazy"
-              />
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/img2.jpg"
-                loading="lazy"
-              />
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/страница_1.jpg"
-                loading="lazy"
-              />
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/страница_2.jpg"
-                loading="lazy"
-              />
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/страница_3.jpg"
-                loading="lazy"
-              />
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/страница_4.jpg"
-                loading="lazy"
-              />
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/страница_5.jpg"
-                loading="lazy"
-              />
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/страница_6.jpg"
-                loading="lazy"
-              />
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/страница_7.jpg"
-                loading="lazy"
-              />
-              <img
-                alt="служба в армии по контракту"
-                src="/assets/images/army/страница_8.jpg"
-                loading="lazy"
-              />
-            </Slider>
+            <SliderMainPage />
           </div>
-          
           <LineHR />
           <TitlePageSecondary
             text="Узнайте подробнее о процессе подбора подходящей работы при оффлайн
@@ -106,48 +48,10 @@ export default function Home() {
           <LineHR />
           <TitlePageSecondary text="Этапы дистанционного обращения" />
           <div className="flex flex-wrap mt-8">
-            <div className="flex flex-col items-center w-full md:w-1/2 xl:w-1/4 p-4 text-center">
-              <img
-                alt=""
-                width={"100%"}
-                src={"/assets/images/checking_jobs.PNG"}
-                className="mb-4"
-              />
-              <span className="text-lg">Заполните и вышлите онлайн резюме</span>
-            </div>
-            <div className="flex flex-col items-center w-full md:w-1/2 xl:w-1/4 p-4 text-center">
-              <img
-                alt=""
-                width={"100%"}
-                src={"/assets/images/serach_jobs.PNG"}
-                className="mb-4"
-              />
-              <span className="text-lg">
-                Наши специалисты подберут для вас вакансии
-              </span>
-            </div>
-            <div className="flex flex-col items-center w-full md:w-1/2 xl:w-1/4 p-4 text-center">
-              <img
-                alt=""
-                width={"100%"}
-                src={"/assets/images/online-interview.PNG"}
-                className="mb-4"
-              />
-              <span className="text-lg">
-                Пройдите онлайн собеседование с работодателем
-              </span>
-            </div>
-            <div className="flex flex-col items-center w-full md:w-1/2 xl:w-1/4 p-4 text-center">
-              <img
-                alt=""
-                width={"100%"}
-                src={"/assets/images/employing.PNG"}
-                className="mb-4"
-              />
-              <span className="text-lg">
-                Получите предложение о трудоустройстве
-              </span>
-            </div>
+            <RemoteStagesItem imgSrc={"/assets/images/checking_jobs.PNG"} text={'Заполните и вышлите онлайн резюме'} />
+            <RemoteStagesItem imgSrc={"/assets/images/serach_jobs.PNG"} text={'Наши специалисты подберут для вас вакансии'} />
+            <RemoteStagesItem imgSrc={"/assets/images/online-interview.PNG"} text={'Пройдите онлайн собеседование с работодателем'} />
+            <RemoteStagesItem imgSrc={"/assets/images/employing.PNG"} text={'Получите предложение о трудоустройстве'} />
           </div>
           <LineHR />
           <TitlePageSecondary text="Советы по написанию резюме" />

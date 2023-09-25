@@ -46,7 +46,7 @@ function NavBar() {
             </span>
           )}
         </div>
-        <div className={`${styles.desktop_menu}`}>
+        <div className={styles.desktop_menu}>
           <NavBarItem
             text={"Главная"}
             path="/"
