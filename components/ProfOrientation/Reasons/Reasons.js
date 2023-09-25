@@ -1,3 +1,5 @@
+import ReasonItem from './ReasonItem'
+
 export default function Reasons() {
 
     return (
