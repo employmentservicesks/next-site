@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { jobs } from "../helpers/jobs";
-import { otherJobs } from "../helpers/otherJobs";
+import { jobs } from "../../../helpers/jobs";
+import { otherJobs } from "../../../helpers/otherJobs";
+import AccordionList from "./AccordionList";
 
 const setList = (collection, region) => {
   const items = collection[region].map((item) => item.trim());
@@ -8,7 +9,7 @@ const setList = (collection, region) => {
   return setItems;
 }
 
-function AccordionItem({ region, collection }) {
+function Accordion({ region, collection }) {
   const [showAccordion, setShowAccordion] = useState(false);
   const [whiteList, setWhiteList] = useState([]);
 
@@ -48,19 +49,11 @@ function AccordionItem({ region, collection }) {
         }}
         className="mt-8 pl-2 sm:pl-8 duration-500 overflow-auto"
       >
-        {whiteList.map((job, index) => (
-          <div key={index} className="flex items-center">
-            <img
-              alt={job}
-              className="h-4 mr-2"
-              src={"/assets/images/marker.gif"}
-            />
-            <span>{job}</span>
-          </div>
-        ))}
+        <AccordionList list={whiteList} />
+
       </div>
     </div>
   );
 }
 
-export default AccordionItem;
+export default Accordion;

@@ -3,26 +3,21 @@ import Layout from "../components/Layout";
 
 import { jobs } from "../helpers/jobs";
 import { otherJobs } from "../helpers/otherJobs";
-import AccordionItem from "../components/AccordionItem";
+import Accordion from "../components/ProfOrientation/Accordion/Accordion";
 import LineHR from "../components/LineHR";
 import TitlePageSecondary from "../components/TypographyElements/TitlePageSecondary";
 
-const createHeader = (jobsList, first, collection) => {
+const createHeader = (jobsList, collection) => {
   const sorted = Object.keys(jobsList).sort();
-  let headers;
 
-  if (first) headers = sorted.slice(0, 7);
-  else headers = sorted.slice(7, 13);
   const DOMHeaders = [];
-
-  for (const header of headers) {
-    DOMHeaders.push(<AccordionItem region={header} collection={collection} />);
+  for (const header of sorted) {
+    DOMHeaders.push(<Accordion region={header} collection={collection} />);
   }
   return DOMHeaders;
 };
 
 const Jobs = () => {
-
 
   return (
     <Layout
@@ -67,22 +62,12 @@ const Jobs = () => {
           </a>
         </span>
         <LineHR />
-        <div className="flex flex-wrap gap-x-12 justify-between">
-          <div className="w-full md:max-w-md lg:max-w-lg 2xl:max-w-3xl">
-            {createHeader(jobs, true, true)}
-          </div>
-          <div className="w-full md:max-w-md lg:max-w-lg 2xl:max-w-3xl">
-            {createHeader(jobs, null, true)}
-          </div>
+        <div className="grid md:grid-cols-2 gap-x-24">
+          {createHeader(jobs, true)}
         </div>
         <TitlePageSecondary text='Другие регионы Российской Федерации' />
-        <div className="flex flex-wrap gap-x-12 justify-between">
-          <div className="w-full md:max-w-md lg:max-w-lg 2xl:max-w-3xl">
-            {createHeader(otherJobs, true)}
-          </div>
-          <div className="w-full md:max-w-md lg:max-w-lg 2xl:max-w-3xl">
-            {createHeader(otherJobs)}
-          </div>
+        <div className="grid md:grid-cols-2 gap-x-24">
+          {createHeader(otherJobs)}
         </div>
       </section>
     </Layout>
