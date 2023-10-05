@@ -9,8 +9,8 @@ const Contacts = () => {
   useEffect(() => {
     async function fetchData() {
 
-      // const res = await fetch('http://127.0.0.1/api/login')
-      const res = await fetch('http://localhost:3000/api/login')
+      const res = await fetch('http://127.0.0.1/api/login')
+      // const res = await fetch('http://localhost:3000/api/login')
       const res2 = await res.json()
       console.log(res2)
     }
