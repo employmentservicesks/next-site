@@ -8,15 +8,17 @@ export default function App({ Component, pageProps }) {
   const [siteTheme, setSiteTheme] = useState();
   let html = useRef(null);
 
+  const changeTheme = (value) => {
+    setSiteTheme(value);
+    localStorage.setItem("theme", value);
+    html.current.className = value;
+  }
+
   const handleTheme = (value) => {
     if (value == "light") {
-      setSiteTheme("dark");
-      localStorage.setItem("theme", "dark");
-      html.current.className = "dark";
+      changeTheme('dark')
     } else {
-      localStorage.setItem("theme", "light");
-      setSiteTheme("light");
-      html.current.className = "light";
+      changeTheme('dark')
     }
   };
 
