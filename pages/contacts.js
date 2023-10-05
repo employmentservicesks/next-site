@@ -2,8 +2,22 @@ import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import ContactField from "../components/Contacts/ContactField";
 import TitlePageMain from '../components/TypographyElements/TitlePageMain'
+import { useEffect } from "react";
 
 const Contacts = () => {
+
+  useEffect(() => {
+    async function fetchData() {
+
+      // const res = await fetch('http://127.0.0.1/api/login')
+      const res = await fetch('http://localhost:3000/api/login')
+      const res2 = await res.json()
+      console.log(res2)
+    }
+
+    fetchData()
+  }, [])
+
   return (
     <Layout
       title={"Контакты | Служба занятости Херсонской области"}
