@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Slider from "react-slick";
 import Head from "next/head";
 import TitlePageSecondary from '../components/TypographyElements/TitlePageSecondary'
+import TitlePageMain from "../components/TypographyElements/TitlePageMain";
 import LineHR from '../components/LineHR'
 
 const Employer = () => {
@@ -36,7 +37,21 @@ const Employer = () => {
       </Head>
       <Hero />
       <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8 flex-1 text-black dark:text-white">
-        <div className='container mx-auto'><TitlePageSecondary text='Важная информация' /></div>
+        <div className='container mx-auto'><TitlePageMain text='Важная информация' />
+          <LineHR />
+          <TitlePageSecondary text="Портал Я в России" />
+          <div className="sm:flex">
+            <span className="text-xl md:text-2xl mb-12 block text-justify sm:w-1/2 sm:mr-4">
+              Портал «Я в России» - это единое окно для жителей ШIР, ДНР, Запорожской и Херсонской областей, созданное чтобы помочь им определиться с порядком получения тех или иных услуг. Фактически это база знаний, которая позволяет в пошаговом режиме понять, что нужно сделать, чтобы получить основные популярные услуги.
+              Его цель - помочь жителям новых регионов разобраться в документах, государственных услугах и найти нужную справочную информацию с адресами, телефонами, графиками работы. Портал поможет получить гражданство, оформить выплаты и пособия, найти работу, подать заявки на получение волонтерской и гуманитарной помощи и др., а властям регионов позволит оперативно реагировать на обращения граждан.
+              Это социальный проект, который решает вопросы цифровизации госуслуг в новых субъектах, делает их реально доступными всем жителям, все услуги и сервисы - абсолютно бесплатные!! !
+              Объем услуг, полезных цифровых продуктов и сторонних сервисов будет постоянно расширяться.
+            </span>
+            <img className="sm:ml-4 sm:w-1/2 h-full" src="/assets/images/information/qr.png" alt="qr" />
+          </div>
+          <a href="https://novorossiya.gosuslugi.ru">Перейти на портал Я в России</a>
+          <LineHR />
+        </div>
         <div className="flex items-center my-12 flex-col">
           <Slider {...settings} className="w-full lg:w-3/4">
             <img
