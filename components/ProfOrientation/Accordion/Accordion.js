@@ -47,7 +47,7 @@ function Accordion({ region, collection }) {
           opacity: showAccordion ? 1 : 0,
           maxHeight: showAccordion ? "1000px" : 0,
         }}
-        className="mt-8 pl-2 sm:pl-8 duration-500 overflow-auto"
+        className="mt-8 pl-2 sm:pl-8 duration-500 overflow-auto list-disc"
       >
         <AccordionList list={whiteList} />
 

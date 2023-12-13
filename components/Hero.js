@@ -11,9 +11,9 @@ function Hero() {
           src={"/assets/icons/logo.svg"}
           loading="lazy"
         />
-        <div className="sm:ml-24 uppercase font-bold max-[640px]:text-center text-2xl sm:text-6xl">
+        <div className="sm:ml-24 uppercase font-bold max-[640px]:text-center text-2xl sm:text-4xl">
           <span className="max-w-screen-sm">
-            службa занятости херсонской области
+            службa занятости населения херсонской области
           </span>
         </div>
       </div>
