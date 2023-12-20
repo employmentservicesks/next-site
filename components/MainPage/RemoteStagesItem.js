@@ -7,6 +7,7 @@ export default function RemoteStagesItem({ imgSrc, text }) {
                 width={"100%"}
                 src={imgSrc}
                 className="mb-4"
+                loading="lazy"
             />
             <span className="text-lg">{text}</span>
         </div>

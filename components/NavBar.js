@@ -32,7 +32,7 @@ function NavBar() {
       style={{ top: navPosition }}
     >
       <div className="container mx-auto w-full h-full flex  items-center text-black dark:text-gray-100 text-2xl justify-between px-2">
-        <img className="h-12 mr-8 sm:mr-24" src={"/assets/images/logo.png"} />
+        <img className="h-12 mr-8 sm:mr-24" src={"/assets/images/logo.png"} loading="lazy" />
         <div
           id="themeBtn"
           onClick={() => clickHandler(theme)}

@@ -47,7 +47,7 @@ const Employer = () => {
               Это социальный проект, который решает вопросы цифровизации госуслуг в новых субъектах, делает их реально доступными всем жителям, все услуги и сервисы - абсолютно бесплатные!! !
               Объем услуг, полезных цифровых продуктов и сторонних сервисов будет постоянно расширяться.
             </span>
-            <img className="sm:ml-4 sm:w-1/2 h-full" src="/assets/images/information/qr.png" alt="qr" />
+            <img className="sm:ml-4 sm:w-1/2 h-full" src="/assets/images/information/qr.png" alt="qr" loading="lazy" />
           </div>
           <a href="https://novorossiya.gosuslugi.ru">Перейти на портал Я в России</a>
           <LineHR />
