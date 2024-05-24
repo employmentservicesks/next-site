@@ -30,7 +30,7 @@ function Accordion({ region, collection }) {
         className="text-2xl flex justify-between cursor-pointer select-none bg-gray-50 dark:bg-indigo-300 rounded-md py-4 px-8 items-center"
         onClick={() => setShowAccordion(!showAccordion)}
       >
-        <div><span className="dark:text-blue-800">{region}</span>{collection && <span className="dark:text-blue-800"> район</span>}</div>
+        <div><span className="dark:text-blue-800">{region}</span>{collection && <span className="dark:text-blue-800"> муниципальный округ</span>}</div>
         {showAccordion ? (
           <span className="material-symbols-outlined text-2xl">
             expand_less
