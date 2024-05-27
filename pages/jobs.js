@@ -30,7 +30,7 @@ const Jobs = () => {
       <section className="w-full shadow-2xl bg-blue-200 dark:bg-blue-700 dark:text-gray-100 px-8 sm:px-16 py-8 flex-1 text-black dark:text-white">
 
         <span className=" block text-4xl my-12">
-          Вакансии в Херсонской области (обновлено{" "}
+          Вакансии Херсонской области (обновлено{" "}
           {new Date().toLocaleString([], {
             day: "numeric",
             month: "numeric",
@@ -39,8 +39,8 @@ const Jobs = () => {
           )
         </span>
         <span className=" block text-2xl my-6">
-          На данной странице вы можете ознакомиться с актуальными вакансиями по
-          районам Херсонской области. Если вас заинтересовали какие-либо из
+          На данной странице вы можете ознакомиться с актуальными вакансиями
+          Херсонской области. Если вас заинтересовали какие-либо из
           вакансий, Вы можете обратиться по номеру тел.{" "}
           <a
             className="inline-flex flex items-center text-blue-600 dark:text-gray-300"
